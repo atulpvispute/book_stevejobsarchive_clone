@@ -4,7 +4,7 @@ import { BookCont1 } from './book-cont-1/book-cont-1';
 
 @Component({
   selector: 'app-book',
-  imports: [BookContent, BookCont1],
+  imports: [BookContent], //BookCont1
   templateUrl: './book.html',
   styleUrl: './book.scss'
 })
