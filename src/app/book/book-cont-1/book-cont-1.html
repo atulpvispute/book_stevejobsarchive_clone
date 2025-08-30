@@ -1,0 +1,295 @@
+<div class="book-container">
+  <!-- Navigation Header -->
+  <nav class="book-nav">
+    <div class="nav-content">
+      <div class="nav-left">
+        <button class="nav-btn" aria-label="Previous page">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="nav-center">
+        <h1 class="book-title">Digital Innovation Chronicles</h1>
+        <p class="book-subtitle">A Journey Through Technology</p>
+      </div>
+      <div class="nav-right">
+        <button class="nav-btn" aria-label="Next page">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Table of Contents Sidebar -->
+  <aside class="table-of-contents" [class.open]="tocOpen">
+    <div class="toc-header">
+      <h2>Contents</h2>
+      <button class="toc-toggle" (click)="toggleToc()" aria-label="Toggle table of contents">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M6 6L14 14M6 14L14 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <ul class="toc-list">
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#chapter1">Chapter 1: The Beginning</a></li>
+      <li><a href="#chapter2">Chapter 2: Innovation Era</a></li>
+      <li><a href="#chapter3">Chapter 3: Digital Revolution</a></li>
+      <li><a href="#chapter4">Chapter 4: Future Vision</a></li>
+      <li><a href="#epilogue">Epilogue</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Book Content -->
+  <main class="book-content">
+    <!-- Cover Page -->
+    <section class="book-page cover-page" id="cover">
+      <div class="page-content">
+        <div class="cover-content">
+          <h1 class="cover-title">Digital Innovation<br>Chronicles</h1>
+          <p class="cover-subtitle">A Journey Through Technology and Human Creativity</p>
+          <div class="cover-author">
+            <p>By Tech Innovators</p>
+            <p class="publication-year">2024</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="book-page" id="introduction">
+      <div class="page-content">
+        <header class="page-header">
+          <h2 class="chapter-title">Introduction</h2>
+        </header>
+        <div class="page-text">
+          <p class="opening-quote">
+            "The intersection of technology and liberal arts is where innovation truly happens."
+          </p>
+          <p>
+            In this digital age, we stand at the crossroads of unprecedented technological advancement 
+            and human creativity. This book explores the journey of innovation, the minds behind 
+            revolutionary ideas, and the impact of technology on our daily lives.
+          </p>
+          <p>
+            From the early days of computing to the modern era of artificial intelligence and 
+            sustainable technology, we'll examine how visionary thinking combined with relentless 
+            execution has shaped our world.
+          </p>
+          <p>
+            Each chapter in this collection represents a milestone in our technological evolution, 
+            told through the lens of those who dared to think differently and challenge the status quo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 1 -->
+    <section class="book-page" id="chapter1">
+      <div class="page-content">
+        <header class="page-header">
+          <span class="chapter-number">Chapter 1</span>
+          <h2 class="chapter-title">The Beginning</h2>
+        </header>
+        <div class="page-text">
+          <p class="chapter-opening">
+            Every great innovation starts with a simple question: "What if?"
+          </p>
+          <p>
+            In the late 1970s, the personal computer was nothing more than a hobbyist's dream. 
+            Most people couldn't imagine why anyone would need a computer at home. The prevailing 
+            wisdom was that computers were massive machines meant for corporations and universities.
+          </p>
+          <p>
+            But a small group of visionaries saw something different. They imagined a world where 
+            computing power could be democratized, where creativity and productivity tools could 
+            be placed in the hands of individuals.
+          </p>
+          <div class="quote-block">
+            <blockquote>
+              "The personal computer revolution was not just about technology—it was about 
+              empowering individuals to express their creativity and amplify their capabilities."
+            </blockquote>
+          </div>
+          <p>
+            This chapter explores the early days of personal computing, the garage startups, 
+            and the bold decisions that laid the foundation for the digital world we know today.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 2 -->
+    <section class="book-page" id="chapter2">
+      <div class="page-content">
+        <header class="page-header">
+          <span class="chapter-number">Chapter 2</span>
+          <h2 class="chapter-title">Innovation Era</h2>
+        </header>
+        <div class="page-text">
+          <p class="chapter-opening">
+            The 1980s and 1990s marked the golden age of user interface innovation.
+          </p>
+          <p>
+            As personal computers became more accessible, the focus shifted from what computers 
+            could do to how people could interact with them. The graphical user interface 
+            revolution made computing intuitive and approachable for millions.
+          </p>
+          <p>
+            This era saw the birth of desktop publishing, multimedia computing, and the early 
+            seeds of what would become the internet revolution. Companies competed not just on 
+            technical specifications, but on user experience and design elegance.
+          </p>
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <p>[Historical Computing Interface Image]</p>
+            </div>
+          </div>
+          <p>
+            The principles established during this time—simplicity, elegance, and user-centered 
+            design—continue to influence product development across all industries today.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 3 -->
+    <section class="book-page" id="chapter3">
+      <div class="page-content">
+        <header class="page-header">
+          <span class="chapter-number">Chapter 3</span>
+          <h2 class="chapter-title">Digital Revolution</h2>
+        </header>
+        <div class="page-text">
+          <p class="chapter-opening">
+            The internet changed everything, but mobile computing changed everything again.
+          </p>
+          <p>
+            The transition from desktop to mobile computing represented more than just a change 
+            in form factor—it was a fundamental shift in how we interact with information and 
+            each other.
+          </p>
+          <p>
+            Suddenly, computing became truly personal. Devices that fit in your pocket could 
+            access the world's information, capture memories, and connect you with anyone, 
+            anywhere, at any time.
+          </p>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <h3>3.8B</h3>
+              <p>Smartphone users worldwide</p>
+            </div>
+            <div class="stat-item">
+              <h3>95%</h3>
+              <p>Of adults have access to mobile phones</p>
+            </div>
+            <div class="stat-item">
+              <h3>6.8B</h3>
+              <p>Apps downloaded annually</p>
+            </div>
+          </div>
+          <p>
+            This chapter examines how mobile computing transformed industries, created new 
+            business models, and fundamentally altered human behavior and social interaction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 4 -->
+    <section class="book-page" id="chapter4">
+      <div class="page-content">
+        <header class="page-header">
+          <span class="chapter-number">Chapter 4</span>
+          <h2 class="chapter-title">Future Vision</h2>
+        </header>
+        <div class="page-text">
+          <p class="chapter-opening">
+            Today's science fiction becomes tomorrow's everyday reality.
+          </p>
+          <p>
+            As we look toward the future, emerging technologies like artificial intelligence, 
+            quantum computing, and sustainable energy solutions promise to reshape our world 
+            once again.
+          </p>
+          <p>
+            The challenge is not just developing these technologies, but ensuring they serve 
+            humanity's best interests and create a more equitable and sustainable future for all.
+          </p>
+          <div class="future-tech-grid">
+            <div class="tech-card">
+              <h4>Artificial Intelligence</h4>
+              <p>Augmenting human capabilities and solving complex problems</p>
+            </div>
+            <div class="tech-card">
+              <h4>Quantum Computing</h4>
+              <p>Revolutionizing computation for scientific breakthroughs</p>
+            </div>
+            <div class="tech-card">
+              <h4>Sustainable Technology</h4>
+              <p>Creating solutions for climate and environmental challenges</p>
+            </div>
+            <div class="tech-card">
+              <h4>Biotechnology</h4>
+              <p>Advancing healthcare and human longevity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Epilogue -->
+    <section class="book-page" id="epilogue">
+      <div class="page-content">
+        <header class="page-header">
+          <h2 class="chapter-title">Epilogue</h2>
+        </header>
+        <div class="page-text">
+          <p class="chapter-opening">
+            "Innovation distinguishes between a leader and a follower."
+          </p>
+          <p>
+            The journey of technological innovation is far from over. Each generation builds 
+            upon the work of those who came before, pushing the boundaries of what's possible 
+            and imagining new ways to improve the human experience.
+          </p>
+          <p>
+            As we continue to advance, the most important question isn't what we can build, 
+            but what we should build. Technology is a tool—it's up to us to wield it wisely.
+          </p>
+          <div class="closing-quote">
+            <blockquote>
+              "The future belongs to those who believe in the beauty of their dreams and 
+              have the courage to pursue them."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Progress Indicator -->
+  <div class="reading-progress">
+    <div class="progress-bar" [style.width.%]="readingProgress"></div>
+  </div>
+
+  <!-- Page Navigation -->
+  <div class="page-navigation">
+    <button class="nav-btn prev-page" (click)="previousPage()" [disabled]="currentPage === 0">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Previous
+    </button>
+    <span class="page-indicator">{{ currentPage + 1 }} of {{ totalPages }}</span>
+    <button class="nav-btn next-page" (click)="nextPage()" [disabled]="currentPage === totalPages - 1">
+      Next
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</div>
