@@ -2,6 +2,7 @@
     <!-- Vertical Scroll Progress Bar -->
     <div class="scroll-progress-bar" 
          [class.dragging]="isDragging"
+         [class.visible]="isScrollProgressVisible"
          (click)="onProgressBarClick($event)"
          (mousedown)="onMouseDown($event)"
          (mousemove)="onMouseMove($event)"

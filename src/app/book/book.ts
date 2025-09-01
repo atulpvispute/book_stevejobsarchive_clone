@@ -12,12 +12,15 @@ export class Book {
   scrollProgress: number = 0;
   isDragging: boolean = false;
   isDragScaling: boolean = false;
+  isScrollProgressVisible: boolean = false;
+  private scrollTimeout: any;
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event) {
     console.log('Scroll event triggered:', event);
     console.log('Scroll position X, Y:', window.scrollX, window.scrollY);
     this.updateScrollProgress();
+    this.showScrollProgress();
   }
 
   private updateScrollProgress() {
@@ -29,6 +32,21 @@ export class Book {
     } else {
       this.scrollProgress = 0;
     }
+  }
+
+  private showScrollProgress() {
+    // Show the progress bar immediately
+    this.isScrollProgressVisible = true;
+    
+    // Clear any existing timeout
+    if (this.scrollTimeout) {
+      clearTimeout(this.scrollTimeout);
+    }
+    
+    // Set a new timeout to hide after 1 second
+    this.scrollTimeout = setTimeout(() => {
+      this.isScrollProgressVisible = false;
+    }, 700);
   }
 
   onProgressBarClick(event: MouseEvent) {
@@ -43,6 +61,7 @@ export class Book {
   onMouseDown(event: MouseEvent) {
     this.isDragging = true;
     this.isDragScaling = true;
+    this.showScrollProgress(); // Show progress bar when interacting
     event.preventDefault(); // Prevent text selection
     this.scrollToPosition(event);
   }
