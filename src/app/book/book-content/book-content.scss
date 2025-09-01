@@ -26,7 +26,80 @@
         }
     }
 
-    .book-section{
+    // Vertical Scroll Progress Bar Container with Hover Area
+    .scroll-progress-bar {
+        position: fixed;
+        top: 10vh; // Start at 10% from top to achieve 80% height
+        right: 0; // Extend to edge for larger hover area
+        width: 100px; // Larger hover area
+        height: 80vh;
+        z-index: 1000;
+        // cursor: pointer; // Make it clear that it's clickable
+        user-select: none; // Prevent text selection during drag
+        opacity: 1; // Hidden by default
+        transition: opacity 0.3s ease-in-out; // Smooth fade in/out
+        
+        // Show progress bar on hover
+        &:hover {
+            opacity: 1;
+            
+            &::before {
+                width: 8px; // Wider on hover
+                right: 20px; // Adjust position to center the expansion
+            }
+            
+            .scroll-progress-fill {
+                width: 8px; // Wider on hover
+                right: 20px; // Adjust position to center the expansion
+            }
+        }
+        
+        // Also show when dragging
+        &.dragging {
+            opacity: 1;
+            
+            &::before {
+                width: 8px; // Wider when dragging
+                right: 20px; // Adjust position to center the expansion
+            }
+            
+            .scroll-progress-fill {
+                width: 8px; // Wider when dragging
+                right: 20px; // Adjust position to center the expansion
+            }
+        }
+        
+        // Show when scrolling (controlled by component)
+        &.visible {
+            opacity: 1;
+        }
+        
+        // Create the actual progress bar track
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 22px; // Distance from edge - adjusted for centering
+            width: 4px;
+            height: 100%;
+            background-color: #ccc; //grey// Grey background
+            transition: width 0.3s ease-in-out, right 0.3s ease-in-out; // Smooth width and position transition
+            transform-origin: center; // Ensure scaling from center
+        }
+        
+                 .scroll-progress-fill {
+             position: absolute;
+             top: 0;
+             right: 22px; // Distance from edge - adjusted for centering
+             width: 4px;
+             background-color: #007bff; // Blue fill color
+             transition: height 0.1s ease-out, width 0.3s ease-in-out, right 0.3s ease-in-out; // Smooth height, width and position transitions
+             height: 0%; // Start with 0% height
+             transform-origin: center; // Ensure scaling from center
+         }
+     }
+
+     .book-section{
         [gray] {
             @extend .book-page-common;
             background-color: #646464;

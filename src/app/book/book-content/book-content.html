@@ -3,7 +3,19 @@
     <div class="chapter-display" [class.visible]="currentChapter">
         {{ currentChapter || '' }}
     </div>
-    <div class="book-section book-cover" chapter=" ">
+    
+    <!-- Vertical Scroll Progress Bar -->
+    <div class="scroll-progress-bar" 
+         [class.dragging]="isDragging"
+         [class.visible]="isScrollProgressVisible"
+         (click)="onProgressBarClick($event)"
+         (mousedown)="onMouseDown($event)"
+         (mousemove)="onMouseMove($event)"
+         (mouseup)="onMouseUp($event)"
+         (mouseleave)="onMouseUp($event)">
+                 <div class="scroll-progress-fill" [style.height.%]="scrollProgress"></div>
+     </div>
+    <div class="book-section book-cover" chapter="Cover">
        <div class="book-page" id="cover" start-page cover vertical-center gray toc="Make Something Wonderful" sticky=" " scrubber=" " shrink=".4">
           <page-content>
              <!-- <polaroid-photo role="img" aria-label="A young Steve, with long hair and mustache, looks directly at the camera. He wears a tuxedo with a lop-sided bow tie.">
@@ -71,4 +83,10 @@
 
             DEF
     </div>
+
+    <!-- <div class="book-section" chapter="GHI" 
+            style="height: 1000px; background-color: black;">
+
+            GHI
+    </div> -->
 </div>
