@@ -1,4 +1,4 @@
-<div class="b-container m-0 p-0">
+<div class="b-container">
     <!-- Vertical Scroll Progress Bar -->
     <div class="scroll-progress-bar" 
          [class.dragging]="isDragging"
@@ -11,7 +11,7 @@
         <div class="scroll-progress-fill" [style.height.%]="scrollProgress"></div>
     </div>
     
-    <div class="content p-5" [class.drag-scaling]="isDragScaling">
+    <div class="b-content" [class.drag-scaling]="isDragScaling">
         <app-book-content></app-book-content>
          <!-- <app-book-cont-1></app-book-cont-1> -->
         

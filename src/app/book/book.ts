@@ -4,7 +4,7 @@ import { BookCont1 } from './book-cont-1/book-cont-1';
 
 @Component({
   selector: 'app-book',
-  imports: [BookContent, BookCont1],
+  imports: [BookContent],
   templateUrl: './book.html',
   styleUrl: './book.scss'
 })
@@ -17,8 +17,8 @@ export class Book {
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event) {
-    console.log('Scroll event triggered:', event);
-    console.log('Scroll position X, Y:', window.scrollX, window.scrollY);
+    // console.log('Scroll event triggered:', event);
+    // console.log('Scroll position X, Y:', window.scrollX, window.scrollY);
     this.updateScrollProgress();
     this.showScrollProgress();
   }
