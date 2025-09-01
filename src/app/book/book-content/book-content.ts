@@ -11,6 +11,7 @@ export class BookContent implements AfterViewInit, OnDestroy {
   scrollProgress: number = 0;
   isDragging: boolean = false;
   isScrollProgressVisible: boolean = false;
+  isDragScaling: boolean = false;
   private intersectionObserver?: IntersectionObserver;
   private scrollTimeout: any;
 
@@ -34,6 +35,12 @@ export class BookContent implements AfterViewInit, OnDestroy {
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event) {
+    this.updateScrollProgress();
+    this.showScrollProgress();
+  }
+
+  @HostListener('wheel', ['$event'])
+  onWheel(event: WheelEvent) {
     this.updateScrollProgress();
     this.showScrollProgress();
   }
@@ -75,6 +82,7 @@ export class BookContent implements AfterViewInit, OnDestroy {
 
   onMouseDown(event: MouseEvent) {
     this.isDragging = true;
+    this.isDragScaling = true;
     this.showScrollProgress(); // Show progress bar when interacting
     event.preventDefault(); // Prevent text selection
     this.scrollToPosition(event);
@@ -89,6 +97,7 @@ export class BookContent implements AfterViewInit, OnDestroy {
 
   onMouseUp(event: MouseEvent) {
     this.isDragging = false;
+    this.isDragScaling = false;
   }
 
   private scrollToPosition(event: MouseEvent) {
