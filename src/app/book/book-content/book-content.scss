@@ -1,6 +1,6 @@
 .book-page-common {
   padding: 50px 20vw;
-  min-height: 100vh;
+  min-height: 110vh;
 }
 
 .book-main {
@@ -131,6 +131,20 @@
       background-color: white;
       color: black;
     }
+
+
+    // 
+    [pink] {
+      @extend .book-page-common;
+      background-color: pink;
+      color: black;
+    }
+
+    [green] {
+      @extend .book-page-common;
+      background-color: lightgreen;
+      color: black;
+    }
   }
 
   // Center align book-page elements
@@ -140,7 +154,7 @@
     justify-content: center;
     
     // Center all content within book-page
-    page-content {
+    .page-content {
       width: 100%;
       height: 100%;
     }
